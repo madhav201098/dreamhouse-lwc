@@ -17,7 +17,7 @@ before_install:
 - sfdx plugins
 - sfdx force --help
 - sfdx commands
-- sfdx force:auth:jwt:grant --instanceurl https://test.salesforce.com --clientid $CONSUMERKEY --jwtkeyfile assets/server.key --username $USERNAME --setdefaultdevhubusername -a HubOrg
+- sfdx force:auth:jwt:grant --clientid $CONSUMERKEY --jwtkeyfile assets/server.key --username $USERNAME --setdefaultdevhubusername -a HubOrg
 
 script:
 - sfdx force:org:create -v HubOrg -s -f config/project-scratch-def.json -a Scratchorg --wait 3
